@@ -1,3 +1,15 @@
+# Test case: Not Fall Detection device
+## Test Case ID: 
+## Description
+	This test shall show when the elder performs normal movement, there will be no notification on display.
+## Procedure
+1. Connect boart to computer
+2. Test the movement by holding the board and moving slowly.
+## Test Device
+
+## Expected Resul
+Display shall not show Fall detected because display shall notify only when the elder fall.
+
 # Test Case : Server Data Sorting
 ## Test Case ID : 001
 ## Description
@@ -10,3 +22,4 @@ This test shall show whether the application handle the incoming MQTT messages c
 Various MQTT topics
 ## Expected Result
 App shall assigned the payload to the database column according to the received MQTT topic
+
