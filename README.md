@@ -1,5 +1,5 @@
 # Test Case : Server Data Sorting
-## Test Case ID : ## 001
+## Test Case ID : 001
 ## Description
 This test shall show whether the application handle the incoming MQTT messages correctly with their corresponding database column
 ## Procedure
