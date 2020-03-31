@@ -1,7 +1,7 @@
 # Test case: Not Fall Detection device
 ## Test Case ID: 
 ## Description
-This test shall show when the elder performs normal movement, there will be no notification on display.
+This test shall show when the elder performs normal movement, there will not notify on display.
 ## Procedure
 1. Connect boart to computer
 2. Test the movement by holding the board and moving slowly.
