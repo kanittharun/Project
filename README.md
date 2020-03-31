@@ -17,7 +17,7 @@ Display shall not show Fall detected because display shall notify only when the 
 Examine the fall of the elderly, which will be detected when the elderly fall.
 ## Procedure
 1. Connect the board to the computer to test for fall.
-2. Test by releasing the board quickly to simulate the fall.
+2. Test by dropped the board to simulate the fall.
 ## Test Device
 Check movement accuracy
 ## Expected Result
