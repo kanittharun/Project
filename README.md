@@ -1,7 +1,7 @@
 # Test case: Not Fall Detection device
 ## Test Case ID: 
 ## Description
-	This test shall show when the elder performs normal movement, there will be no notification on display.
+This test shall show when the elder performs normal movement, there will be no notification on display.
 ## Procedure
 1. Connect boart to computer
 2. Test the movement by holding the board and moving slowly.
@@ -9,6 +9,18 @@
 
 ## Expected Resul
 Display shall not show Fall detected because display shall notify only when the elder fall.
+
+# Test case: Fall Detection
+## Test Case ID: 
+## Description
+Examine the fall of the elderly, which will be detected when the elderly fall.
+## Procedure
+1. Connect the board to the computer to test for fall.
+2. Test by releasing the board quickly to simulate the fall.
+## Test Device
+Check movement accuracy
+## Expected Resul
+Fall detected was a show in display .
 
 # Test Case : Server Data Sorting
 ## Test Case ID : 001
