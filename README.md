@@ -31,7 +31,7 @@ Show that MQTT can connect on NETPIE.
 ## Procedure
 1. Connect board and MQTT server together.
 ## Test Device
-Send Fall detection message to MQTT
+Send Fall Detection message to MQTT.
 ## Expected Result
 Show status connected on NETPIE.
 
