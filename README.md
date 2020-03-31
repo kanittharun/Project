@@ -6,7 +6,7 @@ This test shall show when the elder performs normal movement, there will be no n
 1. Connect boart to computer
 2. Test the movement by holding the board and moving slowly.
 ## Test Device
-
+Check movement accuracy
 ## Expected Resul
 Display shall not show Fall detected because display shall notify only when the elder fall.
 
