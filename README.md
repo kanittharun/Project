@@ -38,7 +38,7 @@ Various MQTT topics
 App shall assigned the payload to the database column according to the received MQTT topic
 
 
-# Test Case : Get Request to Endpoint
+# Test Case : Get Request endpoint
 ## Test Case ID : 001
 ## Description
 In order to summarize the database the server needs to provide the correct response for the request
