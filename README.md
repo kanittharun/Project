@@ -37,3 +37,15 @@ Various MQTT topics
 ## Expected Result
 App shall assigned the payload to the database column according to the received MQTT topic
 
+
+# Test Case : Get Request to Endpoint
+## Test Case ID : 001
+## Description
+In order to summarize the database the server needs to provide the correct response for the request
+## Procedure
+1. Perform a GET request to the application
+2. Verify the json response
+## Test Data
+Postman (Get request)
+## Expected Result
+Postman should show only fall people’s name and the time when people fall
