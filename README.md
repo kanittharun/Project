@@ -41,7 +41,7 @@ App shall assigned the payload to the database column according to the received 
 # Test Case : Get Request endpoint
 ## Test Case ID : 001
 ## Description
-In order to summarize the database the server needs to provide the correct response for the request
+In order to summarize the database, the server needs to provide the correct response for the request
 ## Procedure
 1. Perform a GET request to the application
 2. Verify the json response
