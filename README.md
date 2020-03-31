@@ -24,6 +24,18 @@ Check movement accuracy
 Fall detected was a show in display .
 
 
+# Test case: Test MQTT
+## Test Case ID: 
+## Description
+Show that MQTT can connect on NETPIE. 
+## Procedure
+1. Connect board and MQTT server together.
+## Test Device
+Send Fall detection message to MQTT
+## Expected Result
+Show status connected on NETPIE.
+
+
 # Test Case : Server Data Sorting
 ## Test Case ID : 001
 ## Description
