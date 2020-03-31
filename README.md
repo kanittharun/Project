@@ -51,7 +51,7 @@ App shall assigned the payload to the database column according to the received 
 
 
 # Test Case : Get Request endpoint
-## Test Case ID : 001
+## Test Case ID : 
 ## Description
 In order to summarize the database, the server needs to provide the correct response for the request
 ## Procedure
@@ -61,3 +61,20 @@ In order to summarize the database, the server needs to provide the correct resp
 Postman (Get request)
 ## Expected Result
 Postman should show only fall people’s name and the time when people fall
+
+
+
+#Test Case : Postgres database to Grafana dashboard test
+##Test Case ID : ###001
+##Description
+ This test shall show postgres database can be communicate with Grafana dashboard or not.
+##Procedure
+ 1. Postgres database subscribe to MQTT topics.
+ 2. Grafana send get request to Postgres
+ 3. Grafana query by period via HTTPS
+ 4. Verify the data 
+
+##Test Data
+ Data on Postgres database
+##Expected Result
+ Grafana able to summarize the data within the database correctly
