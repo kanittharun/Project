@@ -104,7 +104,7 @@ int main() {
           myled = 0;
  
         /* Output data. */
-          printf("Free Fall Detected!\r\n");
+          printf("Fall Detected!\r\n");
         }
       }
     }
