@@ -1,5 +1,5 @@
 # Fall Detection
-Prerequisites
+Our aim is to detect the fell of patients.
 ## Getting Started
 
 ### Prerequisites
