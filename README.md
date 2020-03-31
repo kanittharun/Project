@@ -7,7 +7,7 @@ This test shall show when the elder performs normal movement, there will be no n
 2. Test the movement by holding the board and moving slowly.
 ## Test Device
 Check movement accuracy
-## Expected Resul
+## Expected Result
 Display shall not show Fall detected because display shall notify only when the elder fall.
 
 
@@ -20,7 +20,7 @@ Examine the fall of the elderly, which will be detected when the elderly fall.
 2. Test by releasing the board quickly to simulate the fall.
 ## Test Device
 Check movement accuracy
-## Expected Resul
+## Expected Result
 Fall detected was a show in display .
 
 
