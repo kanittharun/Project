@@ -64,17 +64,16 @@ Postman should show only fall people’s name and the time when people fall
 
 
 
-#Test Case : Postgres database to Grafana dashboard test
-##Test Case ID : ###001
-##Description
+# Test Case : Postgres database to Grafana dashboard test
+## Test Case ID : ###001
+## Description
  This test shall show postgres database can be communicate with Grafana dashboard or not.
-##Procedure
+## Procedure
  1. Postgres database subscribe to MQTT topics.
  2. Grafana send get request to Postgres
  3. Grafana query by period via HTTPS
  4. Verify the data 
-
-##Test Data
+## Test Data
  Data on Postgres database
-##Expected Result
+## Expected Result
  Grafana able to summarize the data within the database correctly
