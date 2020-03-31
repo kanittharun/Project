@@ -65,7 +65,7 @@ Postman should show only fall people’s name and the time when people fall
 
 
 # Test Case : Postgres database to Grafana dashboard test
-## Test Case ID : ###001
+## Test Case ID :
 ## Description
  This test shall show postgres database can be communicate with Grafana dashboard or not.
 ## Procedure
