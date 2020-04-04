@@ -1,29 +1,28 @@
-#Fall detection
+# Fall detection
 Fall detection of the elderly
 
-##Project Members
+## Project Members
 **Device Team**
 - Kanittha Rungyaem 6214552611
 - Jantakarn Makma 6214552620
 - Suphidchaya Atthaporn 6222040427
-
 **Cloud Team**
 - Phat Burana 6222040179
 - Pattareeya Piravechsakul 6214552654
 - Pakpoom Imphaiboon 6222040419
 
-##Table of Contents
+## Table of Contents
 1. [Device](#Device)
 2. [Cloud](#Cloud)
 3. [Test Case](#Test case)
 
-##Device
+## Device
 
-##Cloud
+## Cloud
 
 ## Test case
 **Test case: Not Fall Detection device**
-Test Case ID: 001
+- Test Case ID: 001
 - Description
 	- This test shall show when the elder performs normal movement, there will not notify on display.
 - Procedure
@@ -35,7 +34,7 @@ Test Case ID: 001
 	- Display shall not show Fall detected because display shall notify only when the elder fall.
 
 **Test case: Fall Detection**
-Test Case ID: 001
+- Test Case ID: 001
 - Description
 	- Examine the fall of the elderly, which will be detected when the elderly fall.
 - Procedure
@@ -47,7 +46,7 @@ Test Case ID: 001
 	- Fall detected was a show in display and the board will have a bright LED for about 2 seconds.
 
 **Test case: Test MQTT**
-Test Case ID: 001
+- Test Case ID: 001
 - Description
 	- Show that MQTT can connect on NETPIE. 
 - Procedure
@@ -58,7 +57,7 @@ Test Case ID: 001
 	- Show status connected on NETPIE.
 
 **Test Case : Server Data Sorting**
-Test Case ID : 001
+- Test Case ID : 001
 - Description
 	- This test shall show whether the application handle the incoming MQTT messages correctly with their corresponding database column
 - Procedure
@@ -72,7 +71,7 @@ Test Case ID : 001
 
 
 **Test Case : Get Request endpoint**
-Test Case ID : #001
+- Test Case ID : #001
 - Description
 	- In order to summarize the database, the server needs to provide the correct response for the request
 - Procedure
@@ -84,7 +83,7 @@ Test Case ID : #001
 	- Postman should show only fall people’s name and the time when people fall
 
 **Test Case : postgres database to Grafana dashboard test**
-Test Case ID : ###001
+- Test Case ID : ###001
 - Description
 	- This test shall show postgres database can be communicate with Grafana dashboard or not.
 - Procedure
