@@ -15,13 +15,13 @@ Fall detection of the elderly
 ## Table of Contents
 1. [Device](#Device)
 2. [Cloud](#Cloud)
-3. [Testcase](#Test case)
+3. [Test case](#Testcase)
 
 ## Device
 
 ## Cloud
 
-## Test case
+## Testcase
 **Test case: Not Fall Detection device**
 - Test Case ID: 001
 - Description
