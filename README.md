@@ -15,7 +15,7 @@ Fall detection of the elderly
 ## Table of Contents
 1. [Device](#Device)
 2. [Cloud](#Cloud)
-3. [Test case](#Test case)
+3. [Testcase](#Test case)
 
 ## Device
 
