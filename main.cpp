@@ -20,7 +20,7 @@ EventQueue queue(5 * EVENTS_EVENT_SIZE);
 const char CLIENT_ID[] = "aaa4e49d-3043-48ed-b3ed-ccbc608d811c";
 const char NETPIE_TOKEN[] = "QTdpQiTYYKEAoAafu2uJ8fejQvyo4jKh"; 
 const char NETPIE_SECRET[] = "ljVT!GIcW.sZDm1AGl#%%2IoW4.MxOtF";
-const char MQTT_TOPIC[] = "@msg/Yui";
+const char MQTT_TOPIC[] = "@msg/Fall Detected!";
 
 /* User button callback. */
 void pressed_cb() {
@@ -98,13 +98,12 @@ int main() {
         LSM6DSL_Event_Status_t status;
         acc_gyro.get_event_status(&status);
         if (status.FreeFallStatus) {
-          /* Led blinking. */
-          myled = 1;
-          wait(0.2);
-          myled = 0;
- 
         /* Output data. */
           printf("Fall Detected!\r\n");
+	/* Led blinking. */
+          myled = 1;
+          wait(2);
+          myled = 0;
         }
       }
     }
