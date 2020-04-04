@@ -6,6 +6,7 @@ Fall detection of the elderly
 - Kanittha Rungyaem 6214552611
 - Jantakarn Makma 6214552620
 - Suphidchaya Atthaporn 6222040427
+
 **Cloud Team**
 - Phat Burana 6222040179
 - Pattareeya Piravechsakul 6214552654
@@ -14,7 +15,7 @@ Fall detection of the elderly
 ## Table of Contents
 1. [Device](#Device)
 2. [Cloud](#Cloud)
-3. [Test Case](#Test case)
+3. [Test case](#Test case)
 
 ## Device
 
