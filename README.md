@@ -16,13 +16,17 @@ Our system has 3 main components, namely sensor boards that detect fall on the e
 - Pakpoom Imphaiboon 6222040419
 
 ## Table of Contents
+- System shall consist of DEVICE, SERVER and FRONTEND
 1. [Device](#Device)
 2. [Cloud](#Cloud)
-3. [Test case](#Testcase)
+3. [Dashboard](#Dashboard)
+4. [Test case](#Testcase)
 
 ## Device
 
 ## Cloud
+
+## Dashboard
 
 ## Testcase
 **Test case: Not Fall Detection device**
