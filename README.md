@@ -16,7 +16,7 @@
 - Pakpoom     Imphaiboon    6222040419
 
 ## Table of Contents
-- System shall consist of DEVICE, SERVER and FRONTEND
+- System shall consist of **DEVICE, SERVER** and **FRONTEND**
 1. [Device](#Device)
 2. [Cloud](#Cloud)
 3. [Dashboard](#Dashboard)
