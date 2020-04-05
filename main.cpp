@@ -104,6 +104,21 @@ int main() {
           myled = 1;
           wait(2);
           myled = 0;
+MQTT::Message message;
+ 
+    // QoS 0
+    char buf[100];
+    sprintf(buf, "Fall");
+    message.qos = MQTT::QOS0;
+    message.retained = false;
+    message.dup = false;
+    message.payload = (void*)buf;
+    message.payloadlen = strlen(buf)+1;
+ printf("Sending MQTT message\n");
+    ret = mqttClient->publish(MQTT_TOPIC, message);
+    if (ret != 0) {
+        printf("rc from publish was %d\r\n", ret);
+    }
         }
       }
     }
