@@ -2,7 +2,7 @@
 This device was created to detect the fall of the elderly. Wherever the elderly are, they are able to detect. and alert when there is a fall on the cloud to let the caretaker know
 
 Our system has 3 main components, namely sensor boards that detect fall on the elderly, MQTT and Dashbord.
-![](image/1.jpg)
+![](image/Diagram.jpg)
 
 ## Project Members
 **Device Team**
