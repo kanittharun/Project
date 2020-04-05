@@ -38,7 +38,7 @@ Our system has 3 main components, namely sensor boards that detect fall on the e
 	- Display shall not show Fall detected because display shall notify only when the elder fall.
 
 **Test case: Fall Detection**
-- Test Case ID: 001
+- Test Case ID: #001
 - Description
 	- Examine the fall of the elderly, which will be detected when the elderly fall.
 - Procedure
@@ -50,7 +50,7 @@ Our system has 3 main components, namely sensor boards that detect fall on the e
 	- Fall detected was a show in display and the board will have a bright LED for about 2 seconds.
 
 **Test case: Test MQTT**
-- Test Case ID: 001
+- Test Case ID: ##001
 - Description
 	- Show that MQTT can connect on NETPIE. 
 - Procedure
@@ -61,7 +61,7 @@ Our system has 3 main components, namely sensor boards that detect fall on the e
 	- Show status connected on NETPIE.
 
 **Test Case : Server Data Sorting**
-- Test Case ID : 001
+- Test Case ID : ###001
 - Description
 	- This test shall show whether the application handle the incoming MQTT messages correctly with their corresponding database column
 - Procedure
@@ -75,7 +75,7 @@ Our system has 3 main components, namely sensor boards that detect fall on the e
 
 
 **Test Case : Get Request endpoint**
-- Test Case ID : #001
+- Test Case ID : ####001
 - Description
 	- In order to summarize the database, the server needs to provide the correct response for the request
 - Procedure
@@ -87,7 +87,7 @@ Our system has 3 main components, namely sensor boards that detect fall on the e
 	- Postman should show only fall people’s name and the time when people fall
 
 **Test Case : postgres database to Grafana dashboard test**
-- Test Case ID : ###001
+- Test Case ID : #####001
 - Description
 	- This test shall show postgres database can be communicate with Grafana dashboard or not.
 - Procedure
