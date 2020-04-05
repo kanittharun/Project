@@ -96,8 +96,8 @@
 	- This test shall show postgres database can be communicate with Grafana dashboard or not.
 - Procedure
 	1. Postgres database subscribe to MQTT topics.
-	2. Grafana send get request to Postgres
-	3. Grafana query by period via HTTPS
+	2. Grafana add datasource on Postgres database
+	3. Grafana query by period 
 	4. Verify the data 
 - Test Data
 	- Data on Postgres database
