@@ -1,5 +1,5 @@
 # Fall detection
-Fall detection of the elderly
+	This device was created to detect the fall of the elderly. Wherever the elderly are, they are able to detect. and alert when there is a fall on the cloud to let the caretaker know
 
 ## Project Members
 **Device Team**
