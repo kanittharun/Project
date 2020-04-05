@@ -17,9 +17,9 @@ MQTTClient* mqttClient;
 Thread t;
 EventQueue queue(5 * EVENTS_EVENT_SIZE);
 
-const char CLIENT_ID[] = "aaa4e49d-3043-48ed-b3ed-ccbc608d811c";
-const char NETPIE_TOKEN[] = "QTdpQiTYYKEAoAafu2uJ8fejQvyo4jKh"; 
-const char NETPIE_SECRET[] = "ljVT!GIcW.sZDm1AGl#%%2IoW4.MxOtF";
+const char CLIENT_ID[] = "2791a0dd-0ea8-45ba-b785-245c43934aa4";
+const char NETPIE_TOKEN[] = "aZuLnToAjJu8WhjxAETc9eNsToxAxijG"; 
+const char NETPIE_SECRET[] = "AG-vql&^WiVYE(hON5%Jn90XD.epp4wK";
 const char MQTT_TOPIC[] = "@msg/Fall Detected!";
 
 /* User button callback. */
