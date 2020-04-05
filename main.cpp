@@ -17,10 +17,10 @@ MQTTClient* mqttClient;
 Thread t;
 EventQueue queue(5 * EVENTS_EVENT_SIZE);
 
-const char CLIENT_ID[] = "2791a0dd-0ea8-45ba-b785-245c43934aa4";
-const char NETPIE_TOKEN[] = "aZuLnToAjJu8WhjxAETc9eNsToxAxijG"; 
-const char NETPIE_SECRET[] = "AG-vql&^WiVYE(hON5%Jn90XD.epp4wK";
-const char MQTT_TOPIC[] = "@msg/Fall Detected!";
+const char CLIENT_ID[] = "a289d7f8-8fea-43a8-973f-71f32322bebd";
+const char NETPIE_TOKEN[] = "AgWNhCv1ExNV6Dy6jsBQQBFFozcBbgoH"; 
+const char NETPIE_SECRET[] = "k*^t+JK$Y*~7!8*imFvQ6x4#qbOgssPh";
+const char MQTT_TOPIC[] = "@msg/fallevent/Mandy";
 
 /* User button callback. */
 void pressed_cb() {
@@ -104,10 +104,9 @@ int main() {
           myled = 1;
           wait(2);
           myled = 0;
+	
+    MQTT::Message message;
 
-MQTT::Message message;
- 
-    // QoS 0
     char buf[100];
     sprintf(buf, "Fall");
     message.qos = MQTT::QOS0;
@@ -115,12 +114,12 @@ MQTT::Message message;
     message.dup = false;
     message.payload = (void*)buf;
     message.payloadlen = strlen(buf)+1;
- printf("Sending MQTT message\n");
+    printf("Sending MQTT message\n");
     ret = mqttClient->publish(MQTT_TOPIC, message);
     if (ret != 0) {
         printf("rc from publish was %d\r\n", ret);
     }
-        }
-      }
+    }
+    }
     }
 }
