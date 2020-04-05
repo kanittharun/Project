@@ -6,6 +6,9 @@
 ### System Design
 ![](image/Diagram.jpg)
 
+### Software Design
+![](image/SWdesign.jpg)
+
 ## Project Members
 #### Device Team
 - Kanittha    Rungyaem    6214552611
