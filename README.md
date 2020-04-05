@@ -5,12 +5,12 @@
 ![](image/Diagram.jpg)
 
 ## Project Members
-**Device Team**
+#### Device Team
 - Kanittha    Rungyaem    6214552611
 - Jantakarn   Makma       6214552620
 - Suphidchaya Atthaporn   6222040427
 
-**Cloud Team**
+#### Cloud Team
 - Phat        Burana        6222040179
 - Pattareeya  Piravechsakul 6214552654
 - Pakpoom     Imphaiboon    6222040419
