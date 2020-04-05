@@ -2,11 +2,11 @@
     "config": {
         "wifi-ssid": {
             "help": "WiFi SSID",
-            "value": "\"Yui\""
+            "value": "\"Dreammie\""
         },
         "wifi-password": {
             "help": "WiFi Password",
-            "value": "\"12345678\""
+            "value": "\"dream555\""
         }
     },
     "target_overrides": {
