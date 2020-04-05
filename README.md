@@ -41,7 +41,7 @@
 ## Dashboard
 
 ## Testcase
-#### Test case: Not Fall Detection device
+### Test case: Not Fall Detection device
 - Test Case ID: 001
 - Description
 	- This test shall show when the elder performs normal movement, there will not notify on display.
@@ -53,7 +53,7 @@
 - Expected Result
 	- Display shall not show Fall detected because display shall notify only when the elder fall.
 
-#### Test case: Fall Detection
+### Test case: Fall Detection
 - Test Case ID: #001
 - Description
 	- Examine the fall of the elderly, which will be detected when the elderly fall.
@@ -65,7 +65,7 @@
 - Expected Result
 	- Fall detected was a show in display and the board will have a bright LED for about 2 seconds.
 
-#### Test case: Test MQTT
+### Test case: Test MQTT
 - Test Case ID: ##001
 - Description
 	- Show that MQTT can connect on NETPIE. 
@@ -76,7 +76,7 @@
 - Expected Result
 	- Show status connected on NETPIE.
 
-#### Test Case : Server Data Sorting
+### Test Case : Server Data Sorting
 - Test Case ID : ###001
 - Description
 	- This test shall show whether the application handle the incoming MQTT messages correctly with their corresponding database column
@@ -90,7 +90,7 @@
 	- App shall assigned the payload to the database column according to the received MQTT topic
 
 
-#### Test Case : Get Request endpoint
+### Test Case : Get Request endpoint
 - Test Case ID : ####001
 - Description
 	- In order to summarize the database, the server needs to provide the correct response for the request
@@ -102,7 +102,7 @@
 - Expected Result
 	- Postman should show only fall people’s name and the time when people fall
 
-#### Test Case : postgres database to Grafana dashboard test
+### Test Case : postgres database to Grafana dashboard test
 - Test Case ID : #####001
 - Description
 	- This test shall show postgres database can be communicate with Grafana dashboard or not.
