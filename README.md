@@ -25,6 +25,18 @@
 ## Device
 
 ## Cloud
+#### Heroku Python app
+- Subscribe to fall alert topic of the patient
+  * @msg/fallevent/<patient_name>  (Specific)
+  * @msg/fallevent/#               (Multi-level wildcard)
+  * Receive a fall message then classify which user topic it belongs to.
+  * Log the fall event with the corresponding event time into the database. 
+- PostgreSQL Database 
+  * Directed by the database own URL from Heroku Postgres addon.
+  * Contains only one table. Each patient occupies 1 column.
+  * The patient supervisory could also be notified by subscribe to all or specific patient.
+  * The application are also able to summarize the data in the database to a appropriate type to a periodically request dashboard.
+
 
 ## Dashboard
 
