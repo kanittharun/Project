@@ -1,7 +1,9 @@
 # Fall detection
-#### This device was created to detect the fall of the elderly. Wherever the elderly are, they are able to detect. and alert when there is a fall on the cloud to let the caretaker know
+### This device was created to detect the fall of the elderly. Wherever the elderly are, they are able to detect. and alert when there is a fall on the cloud to let the caretaker know
 
-#### Our system has 3 main components, namely sensor boards that detect fall on the elderly, MQTT and Dashbord.
+### Our system has 3 main components, namely sensor boards that detect fall on the elderly, MQTT and Dashbord.
+
+###System Design
 ![](image/Diagram.jpg)
 
 ## Project Members
@@ -25,6 +27,7 @@
 ## Device
 
 ## Cloud
+###Design
 #### Heroku Python app
 - Subscribe to fall alert topic of the patient
   * @msg/fallevent/<patient_name>  (Specific)
