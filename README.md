@@ -21,16 +21,27 @@
 - Pakpoom     Imphaiboon    6222040419
 
 ## Table of Contents
-- System shall consist of **DEVICE, SERVER** and **FRONTEND**
+*System shall consist of **DEVICE, SERVER** and **FRONTEND***
 1. [Device](#Device)
 2. [Cloud](#Cloud)
 3. [Dashboard](#Dashboard)
 4. [Test case](#Testcase)
 
 ## Device
+#### Requirements
+1. DEVICE shall operate as a measure acceleration and angle of each axis
+2. DEVICE shall decide wether the meased data is a fall event or not
+3. DEVICE shall publish MQTT messages reporting fall events
+
+
 
 ## Cloud
-###Design
+#### Requirements
+1. SERVER shall run on cloud
+2. SERVER shall subscribe to all incoming fall events MQTT messages
+3. SERVER shall record each events with it’s corresponding datetime into the database
+4. SERVER shall provide REST endpoint for querying all occurences
+### Could Design
 #### Heroku Python app
 - Subscribe to fall alert topic of the patient
   * @msg/fallevent/<patient_name>  (Specific)
@@ -45,6 +56,11 @@
 
 
 ## Dashboard
+#### Requirements
+1. FRONTEND shall run as a Grafana
+2. FRONTEND shall provide cell that perform data analytics and visualization of occurences 
+
+
 
 ## Testcase
 ### Test case: Not Fall Detection device
