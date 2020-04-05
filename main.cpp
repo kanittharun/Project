@@ -104,6 +104,7 @@ int main() {
           myled = 1;
           wait(2);
           myled = 0;
+
 MQTT::Message message;
  
     // QoS 0
