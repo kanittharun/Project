@@ -1,15 +1,15 @@
 # Fall detection
-#### This device was created to detect the fall of the elderly. Wherever the elderly are, they are able to detect. and alert when there is a fall on the cloud to let the caretaker know
+This device was created to detect the fall of the elderly. Wherever the elderly are, they are able to detect. and alert when there is a fall on the cloud to let the caretaker know
 
-#### Our system has 3 main components, namely sensor boards that detect fall on the elderly, MQTT and Dashbord.
+Our system has 3 main components, namely sensor boards that detect fall on the elderly, MQTT and Dashbord.
 
-### System Design
+**System Design**
 ![](image/Diagram.jpg)
 
-### Software Design
+**Software Design**
 ![](image/SWdesign.JPG)
 
-### Software Detailed Design
+**Software Detailed Design**
 ![](image/Detail1.JPG)
 
 ## Project Members
@@ -24,28 +24,44 @@
 - Pakpoom     Imphaiboon    6222040419
 
 ## Table of Contents
-*System shall consist of **DEVICE, SERVER** and **FRONTEND***
 1. [Device](#Device)
 2. [Cloud](#Cloud)
 3. [Dashboard](#Dashboard)
 4. [Test case](#Testcase)
 
 ## Device
-#### Requirements
+### Requirements
 1. DEVICE shall operate as a measure acceleration and angle of each axis
 2. DEVICE shall decide wether the meased data is a fall event or not
 3. DEVICE shall publish MQTT messages reporting fall events
-#### Device design
+
+### Device design
 When elder wearing the device and activate. Accelerometer measure the acceleration of each axis, gyroscope measure the angle and compare the acceleration and angle of each axis for find the transformation of each axis. For fall detection of elder when detecting the fall of elder, Device will turn on LED light temporarily and show "Fall Detection!" on monitor.
 ![](image/Devicedesign.jpg)
 
+### Getting start
+Clone project, open the terminal and run the following commands
+
+	git clone  https://github.com/Rungyaem-K/Project
+
+and add LSM6DSL, mbed mqtt, and wifi library respectively
+
+	git add https://developer.mbed.org/teams/ST/code/LSM6DSL/#20ccff7dd652
+	git add https://github.com/ARMmbed/mbed-mqtt/#769f0b959957ec53efc1e3be8e82e125e12010b2
+	git add https://github.com/ARMmbed/wifi-ism43362/#1978369b2310ea3955715b67869b717fd224a74c
+
+When library is complete Next, run the program by writing as follows
+
+	mbed compile -m DISCO_L475VG_IOT01A -t GCC_ARM --source . --source ../mbed-os --source ../LSM6DSL --source ../mbed-mqtt --source ../wifi-ism43362
+
+
 ## Cloud
-#### Requirements
+### Requirements
 1. SERVER shall run on cloud
 2. SERVER shall subscribe to all incoming fall events MQTT messages
 3. SERVER shall record each events with it’s corresponding datetime into the database
 4. SERVER shall provide REST endpoint for querying all occurences
-#### Could Design
+### Could Design
 ##### Heroku Python app
 - Subscribe to fall alert topic of the patient
   * @msg/fallevent/<patient_name>  (Specific)
