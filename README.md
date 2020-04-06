@@ -10,7 +10,7 @@
 ![](image/SWdesign.JPG)
 
 ### Software Detailed Design
-![](image/Detail.JPG)
+![](image/Detail1.JPG)
 
 ## Project Members
 #### Device Team
