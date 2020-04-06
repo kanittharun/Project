@@ -57,11 +57,11 @@ When library is complete Next, run the program by writing as follows
 ### Result
 After running the program and the elderly falling on the screen will show "Fall Detection!"
 
-![](image/fall detect.jpg)
+![](image/fall_detect.jpg)
 
 when "Fall Detection!" show on the monitor. On the board, there will be a led light.
 
-![](image/led fall.jpg)
+![](image/led-fall.jpg)
 
 ## Cloud
 ### Requirements
