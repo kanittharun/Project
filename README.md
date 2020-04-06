@@ -4,12 +4,17 @@ This device was created to detect the fall of the elderly. Wherever the elderly 
 Our system has 3 main components, namely sensor boards that detect fall on the elderly, MQTT and Dashbord.
 
 **System Design**
+
 ![](image/Diagram.jpg)
 
+
 **Software Design**
+
 ![](image/SWdesign.JPG)
 
+
 **Software Detailed Design**
+
 ![](image/Detail1.JPG)
 
 ## Project Members
@@ -87,20 +92,21 @@ when "Fall Detection!" show on the monitor. On the board, there will be a led li
 
 ## Dashboard
 #### Requirements
-#### FRONTEND shall run as a Grafana
+FRONTEND shall run as a Grafana
 - Use Grafana dashboard to directly connect PostgreSQL server. 
 - Use all data from PostgreSQL server.
-
-The procedure for testing PostgreSQL server and Grafana dashboard
-![](image/Add_datasource_grafana.jpg)
-#### FRONTEND shall provide cell that perform data analytics and visualization of occurence
+FRONTEND shall provide cell that perform data analytics and visualization of occurence
 - The Dashboard can show fall event count in each patient during time period that you want to know.
 - The Dashboard can show graph and statistic of patient comparing for further analysis.
 
-In our group, using **Grafana dashboard** for receiving the data from PostgreSQL
+#### Starting
+Using **Grafana dashboard** for receiving the data from PostgreSQL are as follows:
 
 First, select data source with PostgreSQL
 ![](image/Config(Grafana).JPG)
+
+The procedure for testing PostgreSQL server and Grafana dashboard
+![](image/Add_datasource_grafana.jpg)
 
 Then, create the dashboard and choose visualization types to a appropriate type to a periodically request dashboard.
 ![](image/ex_dashboard.jpg)
