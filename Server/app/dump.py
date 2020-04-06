@@ -14,7 +14,7 @@ def activate_job():
         while True:
             msg = subscribe.simple('@msg/fallevent/#', hostname='mqtt.netpie.io', port=1883, client_id=CLIENT_ID, auth={'username':NETPIE_TOKEN, 'password':None}, keepalive=10)
             if msg.topic == '@msg/fallevent/John':
-                data_str = msg.payload.decode("utf-8")
+                data_str = msg.payload.decode('ascii').replace('\x00', '')
                 data = FallEvent(John=data_str)
                 db.session.add(data)
                 db.session.commit()
