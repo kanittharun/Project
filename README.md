@@ -32,8 +32,9 @@
 1. DEVICE shall operate as a measure acceleration and angle of each axis
 2. DEVICE shall decide wether the meased data is a fall event or not
 3. DEVICE shall publish MQTT messages reporting fall events
-
-
+#### Device design
+When elder wearing the device and activate. Accelerometer measure the acceleration of each axis, gyroscope measure the angle and compare the acceleration and angle of each axis for find the transformation of each axis. For fall detection of elder when detecting the fall of elder, Device will turn on LED light temporarily and notify to custodian.
+![](image/Devicedesign.jpg)
 
 ## Cloud
 #### Requirements
