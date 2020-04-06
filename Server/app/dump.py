@@ -19,12 +19,12 @@ def activate_job():
                 db.session.add(data)
                 db.session.commit()
             elif msg.topic == '@msg/fallevent/Mandy':
-                data_str = msg.payload.decode("utf-8")
+                data_str = msg.payload.decode('ascii').replace('\x00', '')
                 data = FallEvent(Mandy=data_str)
                 db.session.add(data)
                 db.session.commit()
             else:  
-                data_str = msg.payload.decode("utf-8")
+                data_str = msg.payload.decode('ascii').replace('\x00', '')
                 data = FallEvent(Chris=data_str)
                 db.session.add(data)
                 db.session.commit()
