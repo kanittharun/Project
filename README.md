@@ -82,6 +82,9 @@ When library is complete Next, run the program by writing as follows
 #### FRONTEND shall run as a Grafana
 - Use Grafana dashboard to directly connect PostgreSQL server. 
 - Use all data from PostgreSQL server.
+
+The procedure for testing PostgreSQL server and Grafana dashboard
+![](image/Add_datasource_grafana.jpg)
 #### FRONTEND shall provide cell that perform data analytics and visualization of occurence
 - The Dashboard can show fall event count in each patient during time period that you want to know.
 - The Dashboard can show graph and statistic of patient comparing for further analysis.
