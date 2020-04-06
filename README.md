@@ -61,13 +61,19 @@ When elder wearing the device and activate. Accelerometer measure the accelerati
 
 ## Dashboard
 #### Requirements
-#### FRONTEND shall run as a Grafana
+FRONTEND shall run as a Grafana
 - Use Grafana dashboard to directly connect PostgreSQL server. 
 - Use all data from PostgreSQL server.
-#### FRONTEND shall provide cell that perform data analytics and visualization of occurence
+FRONTEND shall provide cell that perform data analytics and visualization of occurence
 - The Dashboard can show fall event count in each patient during time period that you want to know.
 - The Dashboard can show graph and statistic of patient comparing for further analysis.
 
+In our group, using **Grafana dashboard** for receiving the data from PostgreSQL
+
+First, select data source with PostgreSQL
+![](image/Config(Grafana).JPG)
+
+Then, create the dashboard and choose visualization types  
 ![](image/ex_dashboard.jpg)
 
 
