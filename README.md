@@ -109,7 +109,7 @@ The procedure for testing PostgreSQL server and Grafana dashboard
 ![](image/Add_datasource_grafana.jpg)
 
 Then, create the dashboard and choose visualization types to a appropriate type to a periodically request dashboard.
-![](image/ex_dashboard.jpg)
+![](image/7d.JPG)
 
 
 ## Testcase
