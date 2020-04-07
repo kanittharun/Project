@@ -60,9 +60,9 @@ When library is complete Next, run the program by writing as follows
 	mbed compile -m DISCO_L475VG_IOT01A -t GCC_ARM --source . --source ../mbed-os --source ../LSM6DSL --source ../mbed-mqtt --source ../wifi-ism43362 --flash
 
 ### Result
-After running the program and the elderly falling on the screen will show "Fall Detection!"
+After running the program and the elderly falling on the screen will show "Fall Detection!", and sent to the topic mqtt.
 
-![](image/fall_detect.jpg)
+![](image/falling.png)
 
 when "Fall Detection!" show on the monitor. On the board, there will be a led light.
 
