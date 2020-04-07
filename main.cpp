@@ -6,32 +6,37 @@ static DevI2C devI2c(PB_11,PB_10);
 static LSM6DSLSensor acc_gyro(&devI2c,LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW,PD_11); // low address
 static DigitalOut shutdown_pin(PC_6);
 volatile int mems_event = 0;
-volatile int toggle_free_fall_enable = 0;
-static int free_fall_is_enabled = 1;
+volatile int toggle_fall_enable = 0;
+static int fall_is_enabled = 1;
 
 InterruptIn mybutton(USER_BUTTON);
 DigitalOut myled(LED1);
 WiFiInterface *wifi;
 TCPSocket* socket;
 MQTTClient* mqttClient;
-Thread t;
+Thread thread;
 EventQueue queue(5 * EVENTS_EVENT_SIZE);
 
-const char CLIENT_ID[] = "a289d7f8-8fea-43a8-973f-71f32322bebd";
-const char NETPIE_TOKEN[] = "AgWNhCv1ExNV6Dy6jsBQQBFFozcBbgoH"; 
-const char NETPIE_SECRET[] = "k*^t+JK$Y*~7!8*imFvQ6x4#qbOgssPh";
-const char MQTT_TOPIC[] = "@msg/fallevent/Mandy";
+const char CLIENT_ID[] = "aaa4e49d-3043-48ed-b3ed-ccbc608d811c";
+const char NETPIE_TOKEN[] = "QTdpQiTYYKEAoAafu2uJ8fejQvyo4jKh"; 
+const char NETPIE_SECRET[] = "ljVT!GIcW.sZDm1AGl#%%2IoW4.MxOtF";
+const char MQTT_TOPIC[] = "@msg/fallevent/John";
 
 /* User button callback. */
 void pressed_cb() {
-  toggle_free_fall_enable = 1;
+  toggle_fall_enable = 1;
 }
- 
+
 /* Interrupt 1 callback. */
 void int1_cb() {
   mems_event = 1;
 }
-
+/*led ligh*/
+void led_thread(){
+	myled=1;
+    ThisThread::sleep_for(1000);
+	myled=0;
+}
 /* main function */
 int main() {
 
@@ -58,7 +63,7 @@ int main() {
         printf("rc from TCP connect is %d\r\n", ret);
         return -1;
     }
-
+ 
     // MQTT connection
     mqttClient = new MQTTClient(socket); 
     MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
@@ -68,11 +73,11 @@ int main() {
     //data.password.cstring = (char*)NETPIE_SECRET;
     ret = mqttClient->connect(data);
     if (ret != 0) {
-        printf("rc from MQTT connect is %d\r\n", ret);
+        //printf("rc from MQTT connect is %d\r\n", ret);
         return -1;
     }
 
-	//sensor
+  //sensor
     mybutton.fall(&pressed_cb);
     acc_gyro.attach_int1_irq(&int1_cb);
   
@@ -82,14 +87,14 @@ int main() {
     acc_gyro.enable_free_fall_detection();
   
     while(1) {
-      if(toggle_free_fall_enable) {
-        toggle_free_fall_enable = 0;
-        if(free_fall_is_enabled == 0) {
+      if(toggle_fall_enable) {
+        toggle_fall_enable = 0;
+        if(fall_is_enabled == 0) {
           acc_gyro.enable_free_fall_detection();
-          free_fall_is_enabled = 1;
+          fall_is_enabled = 1;
         } else {
           acc_gyro.disable_free_fall_detection();
-          free_fall_is_enabled = 0;
+          fall_is_enabled = 0;
         }
       }
  
@@ -98,28 +103,26 @@ int main() {
         LSM6DSL_Event_Status_t status;
         acc_gyro.get_event_status(&status);
         if (status.FreeFallStatus) {
-        /* Output data. */
+         /* Output data. */
           printf("Fall Detected!\r\n");
-	/* Led blinking. */
-          myled = 1;
-          wait(2);
-          myled = 0;
-	
-    MQTT::Message message;
-
-    char buf[100];
-    sprintf(buf, "Fall");
-    message.qos = MQTT::QOS0;
+          thread.start(&led_thread);
+		  
+ MQTT::Message message;
+ 
+    // QoS 0
+    char buf[100]="Fall";
+    message.qos = MQTT::QOS1;
     message.retained = false;
     message.dup = false;
     message.payload = (void*)buf;
     message.payloadlen = strlen(buf)+1;
-    printf("Sending MQTT message\n");
+	printf("Sending MQTT message\n");
     ret = mqttClient->publish(MQTT_TOPIC, message);
     if (ret != 0) {
         printf("rc from publish was %d\r\n", ret);
+       
     }
-    }
-    }
+        }
+      }
     }
 }
