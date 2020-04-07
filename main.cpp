@@ -118,7 +118,7 @@ int main() {
         if (status.FreeFallStatus) {
          /* Output data. */
           printf("Fall Detected!\r\n");
-          thread.start(&led_thread);
+          thread_led.start(&led_thread);
 	  Thread::wait(500);
 		
           MQTT::Message message;
