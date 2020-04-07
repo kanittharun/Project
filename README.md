@@ -111,6 +111,9 @@ The procedure for testing PostgreSQL server and Grafana dashboard
 Then, create the dashboard and choose visualization types to a appropriate type to a periodically request dashboard.
 ![](image/7d.JPG)
 
+![](image/Dash1.jpg)
+
+![](image/dash2.jpg)
 
 ## Testcase
 ### Test case: Not Fall Detection device
