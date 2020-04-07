@@ -14,7 +14,9 @@ DigitalOut myled(LED1);
 WiFiInterface *wifi;
 TCPSocket* socket;
 MQTTClient* mqttClient;
-Thread thread;
+Thread thread_led;
+Thread thread_button;
+Thread thread_sensor;
 EventQueue queue(5 * EVENTS_EVENT_SIZE);
 
 const char CLIENT_ID[] = "aaa4e49d-3043-48ed-b3ed-ccbc608d811c";
@@ -26,20 +28,33 @@ const char MQTT_TOPIC[] = "@msg/fallevent/John";
 void pressed_cb() {
   toggle_fall_enable = 1;
 }
+void button_thread(){
+  while (1){
+    mybutton.fall(&pressed_cb);
+  }
+}
 
 /* Interrupt 1 callback. */
 void int1_cb() {
   mems_event = 1;
 }
+void sensor_thread(){
+  while (1){
+    acc_gyro.attach_int1_irq(&int1_cb);
+  }
+}
+
 /*led ligh*/
 void led_thread(){
-	myled=1;
-    ThisThread::sleep_for(1000);
-	myled=0;
+  while (true) {
+    myled = !myled ;
+    thread_sleep_for(500);
+    }
 }
+
 /* main function */
 int main() {
-
+	
   // WiFi connection
     wifi = WiFiInterface::get_default_instance();
     if (!wifi) {
@@ -77,27 +92,25 @@ int main() {
         return -1;
     }
 
-  //sensor
-    mybutton.fall(&pressed_cb);
-    acc_gyro.attach_int1_irq(&int1_cb);
-  
+    //sensor
+    thread_button.start(&button_thread);
+    thread_sensor.start(&sensor_thread);
     int32_t axes[3];
     acc_gyro.init(NULL);
     acc_gyro.enable_x();
     acc_gyro.enable_free_fall_detection();
-  
     while(1) {
       if(toggle_fall_enable) {
         toggle_fall_enable = 0;
         if(fall_is_enabled == 0) {
           acc_gyro.enable_free_fall_detection();
           fall_is_enabled = 1;
-        } else {
+        } 
+	else {
           acc_gyro.disable_free_fall_detection();
           fall_is_enabled = 0;
         }
       }
- 
       if (mems_event) {
         mems_event = 0;
         LSM6DSL_Event_Status_t status;
@@ -106,22 +119,21 @@ int main() {
          /* Output data. */
           printf("Fall Detected!\r\n");
           thread.start(&led_thread);
-		  
- MQTT::Message message;
- 
-    // QoS 0
-    char buf[100]="Fall";
-    message.qos = MQTT::QOS1;
-    message.retained = false;
-    message.dup = false;
-    message.payload = (void*)buf;
-    message.payloadlen = strlen(buf)+1;
-	printf("Sending MQTT message\n");
-    ret = mqttClient->publish(MQTT_TOPIC, message);
-    if (ret != 0) {
-        printf("rc from publish was %d\r\n", ret);
-       
-    }
+	  Thread::wait(500);
+		
+          MQTT::Message message;
+           // QoS 0
+          char buf[100]="Fall";
+          message.qos = MQTT::QOS1;
+          message.retained = false;
+          message.dup = false;
+          message.payload = (void*)buf;
+          message.payloadlen = strlen(buf)+1;
+          printf("Sending MQTT message\n");
+          ret = mqttClient->publish(MQTT_TOPIC, message);
+          if (ret != 0) {
+          printf("rc from publish was %d\r\n", ret);
+          }
         }
       }
     }
