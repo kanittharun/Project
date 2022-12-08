@@ -2,7 +2,7 @@ alembic==1.4.1
 appdirs==1.4.3
 asgiref==3.2.3
 bleak==0.6.1
-certifi==2019.11.28
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 distlib==0.3.0
